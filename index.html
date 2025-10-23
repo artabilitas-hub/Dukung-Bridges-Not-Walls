@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Artabilitas - Jembatan Seni Inklusif (Dark)</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font dan Warna Kustom (Dark Theme) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accentA': '#EF4444', // Merah Aksen (Primary)
+                        'accentB': '#4F46E5', // Indigo/Ungu (Secondary, lebih gelap dari biru sebelumnya)
+                        'darkest': '#121212', // Background utama (Hitam)
+                        'darkGray': '#1F2937', // Konten card background (Abu-abu Gelap)
+                        'textLight': '#E5E7EB', // Teks utama terang
+                        'softGray': '#374151', // Border/divider
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Custom background for header/hero section */
+        .hero-gradient {
+            background: linear-gradient(135deg, #121212 0%, #1F2937 100%);
+        }
+
+        /* Style for the progress bar */
+        .progress-bar-container {
+            height: 12px;
+            background-color: #374151; /* softGray */
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #EF4444; /* accentA */
+            transition: width 0.5s ease-in-out;
+        }
+        
+        body {
+            background-color: #121212; /* Darkest background */
+            color: #E5E7EB; /* Default text color */
+        }
+
+        /* Styling for the schedule table - Zebra Striping */
+        .schedule-table th {
+            background-color: #374151; /* softGray for header */
+            color: #E5E7EB;
+            font-weight: 700;
+            text-align: left;
+            padding: 1rem;
+        }
+        .schedule-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #374151; /* softGray border */
+        }
+        /* Baris Genap (even) - Abu-abu Gelap */
+        .schedule-table tbody tr:nth-child(even) {
+            background-color: #1F2937; /* darkGray */
+        }
+        /* Baris Ganjil (odd) - Hitam Lebih Gelap */
+        .schedule-table tbody tr:nth-child(odd) {
+            background-color: #121212; /* darkest */
+        }
+        /* Hover effect for all rows */
+        .schedule-table tbody tr:hover {
+            background-color: #2D3748; 
+            cursor: default;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="hero-gradient text-white py-16 md:py-24 shadow-2xl">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <!-- Logo Artabilitas kini menjadi tautan ke halaman utama (#) -->
+                <a href="https://artabilitas.wixsite.com/artabilitas" target="_blank"> 
+                    <img src="logo-artabilitas-4web.jpg" onerror="this.onerror=null; this.src='https://placehold.co/100x100/121212/E5E7EB?text=LOGO';" alt="Logo Artabilitas" class="w-24 h-24 rounded-full mx-auto border-4 border-accentA shadow-lg">
+                </a>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-3 leading-tight">Artabilitas</h1>
+            <p class="text-xl md:text-2xl font-light text-gray-400 max-w-3xl mx-auto">
+                Membangun Jembatan, Bukan Tembok. <br class="hidden md:inline"> Seni adalah hak asasi manusia, tanpa batas neurotipikal.
+            </p>
+            <div class="mt-8 space-x-4">
+                <!-- TOMBOL UTAMA BERUBAH MENJADI AJAKAN DONASI -->
+                <a href="#dukungan" class="inline-block px-8 py-3 bg-accentA text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition duration-300 transform hover:scale-105">
+                    Dukung Kualitas Pameran Kami Sekarang! 🚀
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section: Misi Kami -->
+    <section class="py-16 md:py-24 bg-darkGray border-b border-softGray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-textLight mb-12">Misi Utama: Menuju Kesetaraan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Misi 1 -->
+                <div class="bg-darkest p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-accentA">
+                    <div class="text-3xl text-accentA mb-3">🎨</div>
+                    <h3 class="text-xl font-semibold mb-3 text-textLight">Kualitas Kuratorial</h3>
+                    <p class="text-gray-400">Memastikan karya dinilai dari kualitas artistik murni, bukan dari latar belakang neurodivergen seniman. Kami mengedepankan standar <strong>White Cube</strong>.</p>
+                </div>
+
+                <!-- Misi 2 -->
+                <div class="bg-darkest p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-accentB">
+                    <div class="text-3xl text-accentB mb-3">🤝</div>
+                    <h3 class="text-xl font-semibold mb-3 text-textLight">Akses Mainstream</h3>
+                    <p class="text-gray-400">Pameran di Galeri kredibel untuk bertemu langsung dengan kritikus, kolektor, dan publik seni kontemporer utama.</p>
+                </div>
+
+                <!-- Misi 3 -->
+                <div class="bg-darkest p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-softGray">
+                    <div class="text-3xl text-softGray mb-3">🧠</div>
+                    <h3 class="text-xl font-semibold mb-3 text-textLight">Edukasi Neurodivergen</h3>
+                    <p class="text-gray-400">Mengubah stigma publik dan wacana seni rupa di Indonesia tentang cara seniman neurodivergen berekspresi.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION BARU: DUKUNGAN KUALITAS INSTALASI (Microsponsorship) -->
+    <section id="dukungan" class="py-16 md:py-24 bg-darkest border-b border-softGray">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold uppercase text-accentA tracking-wider">Langkah Selanjutnya</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-textLight mt-2">Dukungan Komunitas: Kualitas Instalasi Profesional</h2>
+                <p class="text-gray-400 mt-3 max-w-3xl mx-auto">
+                    Dukungan komunitas sangat dibutuhkan untuk Biaya Operasional dan <strong>menjamin kualitas presentasi</strong> yang setara dengan medan seni kontemporer di Jagad Gallery. Setiap donasi membawa kita semakin dekat ke standar Kurator Asmudjo.
+                </p>
+            </div>
+            
+            <!-- PROGRESS BAR -->
+            <div class="mb-10 p-6 bg-darkGray rounded-xl shadow-inner border border-softGray">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-sm font-semibold text-textLight">Target Dana Operasional (Instalasi & Arsip)</p>
+                    <p class="text-lg font-bold text-textLight" id="current-fund">Rp 12.000.000 / Rp 30.000.000</p>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar" style="width: 40%;"></div>
+                </div>
+                <p class="text-xs text-gray-500 mt-2 text-right">Semua tautan donasi mengarah ke Saweria Artabilitas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Paket 1: Mitra Kualitas Instalasi (Fokus ke Visual) -->
+                <div class="p-6 rounded-xl shadow-2xl border-t-8 border-accentA bg-darkGray">
+                    <h3 class="text-2xl font-bold text-accentA mb-2">Mitra Kualitas Instalasi</h3>
+                    <p class="text-sm font-semibold text-gray-300 mb-4">Dana menjamin tampilan karya setara galeri profesional.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li><strong>Fungsi Utama:</strong> Mendanai <strong>Lighting</strong> Khusus dan Penataan Ruang.</li>
+                        <li><strong>Dampak:</strong> Karya seniman neurodivergen dinilai murni dari aspek artistik.</li>
+                        <li><strong>Benefit:</strong> Logo atau nama Anda tercantum di <strong>Papan Instalasi Khusus</strong> (di samping Kurator & Galeri).</li>
+                    </ul>
+                    <!-- TAUTAN DONASI SAWERIA -->
+                    <a href="https://saweria.co/artabilitas" target="_blank" class="mt-6 block text-center px-6 py-3 bg-accentA text-white font-bold rounded-full hover:bg-red-600 transition">
+                        Dukung Instalasi
+                    </a>
+                </div>
+
+                <!-- Paket 2: Mitra Arsip Seni (Fokus ke Legacy) -->
+                <div class="p-6 rounded-xl shadow-2xl border-t-8 border-accentB bg-darkGray">
+                    <h3 class="text-2xl font-bold text-accentB mb-2">Mitra Arsip Seni</h3>
+                    <p class="text-sm font-semibold text-gray-300 mb-4">Dana menjamin <strong>legacy</strong> pameran untuk kajian masa depan.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li><strong>Fungsi Utama:</strong> Mendanai Dokumentasi (Fotografer/Video) & Katalog Digital.</li>
+                        <li><strong>Dampak:</strong> Karya seniman terarsip untuk dipelajari kritikus dan akademisi.</li>
+                        <li><strong>Benefit:</strong> Nama Anda tercantum di <strong>Katalog Digital</strong> pameran sebagai Mitra Arsip Resmi.</li>
+                    </ul>
+                    <!-- TAUTAN DONASI SAWERIA -->
+                    <a href="https://saweria.co/artabilitas" target="_blank" class="mt-6 block text-center px-6 py-3 bg-accentB text-white font-bold rounded-full hover:bg-indigo-700 transition">
+                        Dukung Arsip
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section: Pameran Utama - Bridges Not Walls -->
+    <section id="pameran" class="py-16 md:py-24 bg-darkest">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold uppercase text-accentA tracking-wider">Pameran Perdana</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-textLight mt-2">"Bridges Not Walls"</h2>
+                <p class="text-gray-400 mt-3 italic max-w-2xl mx-auto">
+                    Aksi kuratorial yang menegaskan bahwa seni adalah bahasa universal yang melampaui batas kemampuan, perbedaan, dan latar belakang apa pun.
+                </p>
+                <!-- Penjelasan White Cube -->
+                <div class="mt-6 p-4 bg-yellow-900 text-yellow-300 border-l-4 border-yellow-400 rounded-lg max-w-xl mx-auto text-sm">
+                    <strong>Apa itu Standar White Cube?</strong> Adalah filosofi desain ruang galeri yang minimalis (dinding putih, pencahayaan terarah). Tujuannya agar audiens menilai karya seni berdasarkan <strong>kualitas artistik murni</strong> saja, bukan karena latar belakang khusus seniman.
+                </div>
+            </div>
+
+            <!-- Detail Pameran -->
+            <div class="bg-darkGray p-8 rounded-xl shadow-lg mb-12 border-l-4 border-accentA grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <p class="text-sm font-medium text-gray-400">Periode Pameran</p>
+                    <p class="text-lg font-bold text-textLight">Awal Tahun 2026 (14 Hari)</p>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-400">Lokasi Pameran</p>
+                    <p class="text-lg font-bold text-textLight">Jagad Gallery, Wisma Geha, Jakarta</p>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-400">Kurator Utama</p>
+                    <p class="text-lg font-bold text-textLight">Asmudjo Jono Irianto</p>
+                </div>
+            </div>
+
+            <!-- Ringkasan Kuratorial -->
+            <div class="bg-darkGray p-6 rounded-xl shadow-inner border border-softGray">
+                <h3 class="text-2xl font-bold text-textLight mb-4 border-b border-softGray pb-2">Tentang Kuratorial</h3>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    Pameran ini merupakan bagian dari perjalanan awal Artabilitas dalam membangun kemungkinan praktik dan ruang seni yang lebih terbuka serta setara bagi para seniman neurodivergen. Perbedaan cara memproses informasi (autisme, ADHD, disleksia, dll.) dipandang sebagai <strong>kekuatan tersendiri</strong> dalam konteks seni.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    Kurator Asmudjo Jono Irianto akan menggunakan <strong>Tiga Lapisan Kuratorial</strong> untuk memastikan karya-karya ini dinilai berdasarkan bahasa visual, komposisi, dan resonansi artistik, bukan sekadar cerita pribadi senimannya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Jadwal Acara Inti (Schedule Table) -->
+    <section class="py-16 md:py-24 bg-darkGray">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-textLight mb-12">Jadwal Acara Inti Pameran</h2>
+
+            <!-- Pembukaan -->
+            <h3 class="text-2xl font-bold text-accentA mb-4 border-b border-softGray pb-2">1. Acara Pembukaan (Vernissage & VIP Reception)</h3>
+            <p class="text-gray-400 mb-6 italic">Waktu: Hari 1, Pukul 18.30-21.00 WIB. Tujuan: Peluncuran resmi dan jejaring dengan kolektor.</p>
+            
+            <div class="rounded-xl shadow-xl overflow-x-auto mb-12 border border-softGray">
+                <table class="w-full schedule-table text-textLight">
+                    <thead>
+                        <tr>
+                            <th class="w-1/5">Waktu</th>
+                            <th class="w-2/5">Kegiatan</th>
+                            <th class="w-2/5">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>18.30-19.00</td>
+                            <td>Registrasi Tamu VIP & Networking</td>
+                            <td>Penerimaan tamu, media, dan kolektor. Minuman sambutan.</td>
+                        </tr>
+                        <tr>
+                            <td>19.00-19.10</td>
+                            <td>Pembukaan Resmi oleh MC</td>
+                            <td>Sambutan singkat dan pengenalan Artabilitas.</td>
+                        </tr>
+                        <tr>
+                            <td>19.10-19.20</td>
+                            <td>Sambutan Mitra Strategis</td>
+                            <td><strong>Keynote Speech</strong> oleh perwakilan Mitra Strategis Utama.</td>
+                        </tr>
+                        <tr>
+                            <td>19.20-19.30</td>
+                            <td>Sambutan Artabilitas</td>
+                            <td>Penjelasan visi Artabilitas dan tujuan pameran.</td>
+                        </tr>
+                        <tr>
+                            <td>19.30-19.45</td>
+                            <td>Pengantar Kuratorial</td>
+                            <td>Asmudjo Jono Irianto menjelaskan konsep kuratorialnya.</td>
+                        </tr>
+                        <tr>
+                            <td>19.45-19.50</td>
+                            <td>Peresmian Simbolis</td>
+                            <td>Prosesi pembukaan pameran.</td>
+                        </tr>
+                        <tr>
+                            <td>19.50-21.00</td>
+                            <td><strong>Gallery Walk</strong> & <strong>Networking</strong></td>
+                            <td>Para tamu menjelajahi pameran didampingi Kurator dan Penyelenggara.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Diskusi Kuratorial -->
+            <h3 class="text-2xl font-bold text-accentB mb-4 border-b border-softGray pb-2 mt-10">2. Diskusi Kuratorial Publik</h3>
+            <p class="text-gray-400 mb-6 italic">Waktu: Hari 5 (Akhir Pekan), Pukul 15.00-17.00 WIB. Tujuan: Menarik akademisi dan kritikus serius.</p>
+
+            <div class="rounded-xl shadow-xl overflow-x-auto border border-softGray">
+                <table class="w-full schedule-table text-textLight">
+                    <thead>
+                        <tr>
+                            <th class="w-1/5">Waktu</th>
+                            <th class="w-2/5">Kegiatan</th>
+                            <th class="w-2/5">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15.00-15.15</td>
+                            <td>Pembukaan & Pengantar</td>
+                            <td>Latar belakang Pameran dan Kurator.</td>
+                        </tr>
+                        <tr>
+                            <td>15.15-16.00</td>
+                            <td>Sesi Utama: "Seniman Neurodivergen di Medan Seni Rupa Kontemporer"</td>
+                            <td>Diskusi bersama Kurator Asmudjo Jono Irianto.</td>
+                        </tr>
+                        <tr>
+                            <td>16.00-16.30</td>
+                            <td>Panel Seniman & Keluarga</td>
+                            <td>Sesi tanya jawab (<strong>Q&A</strong>) dengan perwakilan seniman dan keluarga untuk memberikan perspektif personal.</td>
+                        </tr>
+                        <tr>
+                            <td>16.30-17.00</td>
+                            <td>Sesi <strong>Q&A</strong> Terbuka & Penutup</td>
+                            <td>Interaksi dengan audiens dan penutup acara.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkest text-white py-8 border-t border-softGray">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 Artabilitas. All rights reserved.</p>
+            <p class="text-sm text-gray-500 mb-4">Komunitas Seni Neurodivergen Indonesia.</p>
+            <a href="mailto:artabilitas@gmail.com" target="_blank" class="text-accentA hover:text-red-400 transition duration-300">Hubungi Kami</a>
+        </div>
+    </footer>
+
+    <script>
+        // Script sederhana untuk mensimulasikan Progress Bar (untuk update manual)
+        // Anda hanya perlu mengubah nilai di bawah ini saat mengupdate microsite
+        const targetFund = 30000000; // Target Rp 30 Juta (Ganti sesuai perhitungan kritis)
+        const currentFund = 12000000; // Dana terkumpul saat ini (Ganti saat ada donasi)
+
+        const progressPercent = Math.min((currentFund / targetFund) * 100, 100);
+
+        document.getElementById('progress-bar').style.width = progressPercent + '%';
+        document.getElementById('current-fund').textContent = 
+            `Rp ${currentFund.toLocaleString('id-ID')} / Rp ${targetFund.toLocaleString('id-ID')}`;
+        document.querySelector('.text-xs.text-gray-500.mt-2.text-right').textContent = 
+            `Semua tautan donasi mengarah ke Saweria Artabilitas.`;
+        
+    </script>
+</body>
+</html>
