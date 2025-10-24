@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artabilitas - Dukung Pameran Bridges Not Walls</title>
-    <!-- Load Tailwind CSS -->
+    <!-- Muat Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Konfigurasi Font dan Warna Kustom (Dark Theme) -->
     <script>
@@ -13,7 +13,7 @@
                 extend: {
                     colors: {
                         'accentA': '#EF4444', // Merah Aksen (Primary)
-                        'accentB': '#4F46E5', // Indigo/Ungu (Secondary, lebih gelap dari biru sebelumnya)
+                        'accentB': '#4F46E5', // Indigo/Ungu (Secondary)
                         'darkest': '#121212', // Background utama (Hitam)
                         'darkGray': '#1F2937', // Konten card background (Abu-abu Gelap)
                         'textLight': '#E5E7EB', // Teks utama terang
@@ -29,12 +29,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
-        /* Custom background for header/hero section */
+        /* Gradient kustom untuk bagian header/hero */
         .hero-gradient {
             background: linear-gradient(135deg, #121212 0%, #1F2937 100%);
         }
 
-        /* Style for the progress bar */
+        /* Gaya untuk progress bar */
         .progress-bar-container {
             height: 12px;
             background-color: #374151; /* softGray */
@@ -48,13 +48,13 @@
         }
         
         body {
-            background-color: #121212; /* Darkest background */
-            color: #E5E7EB; /* Default text color */
+            background-color: #121212; /* Background tergelap */
+            color: #E5E7EB; /* Warna teks default */
         }
 
-        /* Styling for the schedule table - Zebra Striping */
+        /* Styling untuk tabel jadwal - Zebra Striping */
         .schedule-table th {
-            background-color: #374151; /* softGray for header */
+            background-color: #374151; /* softGray untuk header */
             color: #E5E7EB;
             font-weight: 700;
             text-align: left;
@@ -73,7 +73,7 @@
         .schedule-table tbody tr:nth-child(odd) {
             background-color: #121212; /* darkest */
         }
-        /* Hover effect for all rows */
+        /* Efek hover untuk semua baris */
         .schedule-table tbody tr:hover {
             background-color: #2D3748; 
             cursor: default;
@@ -86,9 +86,9 @@
     <header class="hero-gradient text-white py-16 md:py-24 shadow-2xl">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-6">
-                <!-- Logo Artabilitas kini menjadi tautan ke halaman utama (#) -->
+                <!-- Logo Artabilitas kini menjadi tautan ke halaman utama Artabilitas -->
                 <a href="https://artabilitas.wixsite.com/artabilitas" target="_blank"> 
-                    <img src="logo-artabilitas-4web.jpg" onerror="this.onerror=null; this.src='https://placehold.co/100x100/121212/E5E7EB?text=LOGO';" alt="Logo Artabilitas" class="w-24 h-24 rounded-full mx-auto border-4 border-accentA shadow-lg">
+                    <img src="Logo Artabilitas whitecircle HiRres.jpg" onerror="this.onerror=null; this.src='https://placehold.co/100x100/121212/E5E7EB?text=LOGO';" alt="Logo Artabilitas" class="w-24 h-24 rounded-full mx-auto border-4 border-accentA shadow-lg">
                 </a>
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-3 leading-tight">Artabilitas</h1>
@@ -96,7 +96,7 @@
                 Membangun Jembatan, Bukan Tembok. <br class="hidden md:inline"> Seni adalah hak asasi manusia, tanpa batas neurotipikal.
             </p>
             <div class="mt-8 space-x-4">
-                <!-- TOMBOL UTAMA BERUBAH MENJADI AJAKAN DONASI -->
+                <!-- Tombol utama menuju bagian dukungan -->
                 <a href="#dukungan" class="inline-block px-8 py-3 bg-accentA text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition duration-300 transform hover:scale-105">
                     Dukung Kualitas Pameran Kami Sekarang! 🚀
                 </a>
@@ -120,8 +120,8 @@
                 <!-- Misi 2 -->
                 <div class="bg-darkest p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-accentB">
                     <div class="text-3xl text-accentB mb-3">🤝</div>
-                    <h3 class="text-xl font-semibold mb-3 text-textLight">Akses Mainstream</h3>
-                    <p class="text-gray-400">Pameran di Galeri kredibel untuk bertemu langsung dengan kritikus, kolektor, dan publik seni kontemporer utama.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-textLight">Membuka Jaringan dan Kesempatan</h3>
+                    <p class="text-gray-400">Membangun koneksi permanen dengan galeri, kurator, dan kolektor ternama untuk menciptakan jalur mainstream bagi seniman Artabilitas.</p>
                 </div>
 
                 <!-- Misi 3 -->
@@ -135,75 +135,57 @@
         </div>
     </section>
 
-    <!-- SECTION BARU: DUKUNGAN KUALITAS INSTALASI (Microsponsorship) -->
+    <!-- SECTION DUKUNGAN KUALITAS INSTALASI (Microsponsorship) - DESAIN KARTU TUNGGAL -->
     <section id="dukungan" class="py-16 md:py-24 bg-darkest border-b border-softGray">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="text-center mb-12">
                 <span class="text-sm font-semibold uppercase text-accentA tracking-wider">Langkah Selanjutnya</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-textLight mt-2">Dukungan Komunitas: Kualitas Instalasi Profesional</h2>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-textLight mt-2">Dukungan Komunitas</h2>
                 <p class="text-gray-400 mt-3 max-w-3xl mx-auto">
-                    Dukungan komunitas sangat dibutuhkan untuk Biaya Operasional dan <strong>menjamin kualitas presentasi</strong> yang setara dengan medan seni kontemporer di Jagad Gallery. Setiap donasi membawa kita semakin dekat ke standar Kurator Asmudjo.
+                    Dukungan komunitas sangat dibutuhkan untuk Biaya Operasional dan <strong>menjamin kualitas presentasi</strong> yang setara dengan medan seni kontemporer di Jagad Gallery. Setiap donasi membawa kita semakin dekat ke standar Kurator Asmudjo Jono Irianto.
                 </p>
             </div>
             
-            <!-- PROGRESS BAR (Data Placeholder) -->
+            <!-- PROGRESS BAR -->
             <div class="mb-10 p-6 bg-darkGray rounded-xl shadow-inner border border-softGray">
                 <div class="flex justify-between items-center mb-2">
-                    <p class="text-sm font-semibold text-textLight">Dana terkumpul per Dana Target (Instalasi & Arsip)</p>
-                    <p class="text-lg font-bold text-textLight" id="current-fund">Rp 12.000.000 / Rp 35.000.000</p>
+                    <p class="text-sm font-semibold text-textLight">Dana terkumpul per dana target (Untuk Instalasi & Arsip)</p>
+                    <p class="text-lg font-bold text-textLight" id="current-fund">Rp 12.000.000 dari Target Rp 35.000.000</p>
                 </div>
                 <div class="progress-bar-container">
-                    <div class="progress-bar" id="progress-bar" style="width: 40%;"></div>
+                    <div class="progress-bar" id="progress-bar" style="width: 34.29%;"></div>
                 </div>
-                <p class="text-xs text-gray-500 mt-2 text-right">Persentase saat ini: <strong>34.29%</strong>. Semua tautan donasi mengarah ke Saweria Artabilitas.</p>
+                <p class="text-xs text-gray-500 mt-2 text-right">
+                    <strong>Status Update:</strong> Persentase saat ini: <strong>34.29%</strong>. Tautan donasi mengarah ke Saweria Artabilitas.</p>
             </div>
 
-                  <!-- KARTU DUKUNGAN TUNGGAL -->
+            <!-- KARTU DUKUNGAN TUNGGAL YANG LEBIH INKLUSIF -->
             <div class="max-w-xl mx-auto">
                 <div class="bg-darkGray text-textLight p-8 md:p-10 rounded-2xl shadow-2xl border-b-8 border-accentA">
                     <div class="text-center">
-                        <span class="text-sm font-semibold uppercase tracking-widest text-accentB mb-2 block">PILIHAN KEMITRAAN KOMUNITAS</span>
-                        <h3 class="text-4xl font-extrabold mb-6 text-textLight">Mitra Kualitas Pameran & Legacy</h3>
+                        <span class="text-sm font-semibold uppercase tracking-widest text-accentB mb-2 block">BERGABUNG SEBAGAI MITRA KOMUNITAS</span>
+                        <h3 class="text-4xl font-extrabold mb-6 text-textLight">Dukung Kualitas Pameran</h3>
+                        <p class="text-gray-400 mb-8">Setiap kontribusi Anda, berapapun jumlahnya, sangat berarti untuk membantu kami mencapai standar kualitas presentasi di Jagad Gallery dan mengarsipkan karya ini secara profesional.</p>
                     </div>
                     
-                    <div class="space-y-4 mb-8 border-b border-softGray pb-6">
-                        <p class="text-lg font-bold text-accentA">Manfaat Eksklusif Sebagai Mitra Kualitas:</p>
-                        
-                        <!-- Benefit 1: Visibilitas di Galeri -->
-                        <p class="flex items-start font-semibold">
-                            <span class="text-accentA text-2xl mr-3">&check;</span>
-                            Nama Anda/Institusi ditampilkan di <strong>Papan Ucapan Terima Kasih</strong> di Jagad Gallery.
-                        </p>
-                        <!-- Benefit 2: Pengakuan Publikasi -->
-                        <p class="flex items-start font-semibold">
-                            <span class="text-accentA text-2xl mr-3">&check;</span>
-                            Dicantumkan di <strong>Katalog Digital Permanen</strong> pada halaman Acknowledgements.
-                        </p>
-                        <!-- Benefit 3: Akses Jaringan -->
-                        <p class="flex items-start font-semibold">
-                            <span class="text-accentA text-2xl mr-3">&check;</span>
-                            Undangan VIP ke <strong>Vernissage (Pembukaan Pameran)</strong> dan Tur Kuratorial eksklusif.
-                        </p>
-                        <!-- Benefit 4: Warisan Digital -->
-                        <p class="flex items-start font-semibold">
-                            <span class="text-accentA text-2xl mr-3">&check;</span>
-                            Nama Anda diposisikan sebagai kontributor utama di <strong>Microsite Artabilitas</strong> (Warisan Digital).
-                        </p>
+                    <div class="space-y-4 mb-8 border-t border-softGray pt-6">
+                        <p class="text-lg font-bold text-accentA text-center">Manfaat Eksklusif Sebagai Mitra Komunitas:</p>
+                        <!-- Poin manfaat yang lebih ringkas -->
+                        <ul class="list-disc list-inside space-y-2 text-gray-400 text-center">
+                            <li>Nama Anda/Institusi dicantumkan di <strong>Papan Ucapan Terima Kasih</strong> di Galeri.</li>
+                            <li>Dicantumkan di <strong>Katalog Digital Permanen</strong> pameran.</li>
+                            <li>Undangan VIP ke <strong>Vernissage (Pembukaan)</strong> & Tur Kuratorial.</li>
+                            <li>Pengakuan sebagai kontributor utama di <strong>Microsite Artabilitas</strong>.</li>
+                        </ul>
                     </div>
                     
-                    <!-- Pilihan Donasi -->
-                    <div class="space-y-4">
-                         <!-- Tier A: Utama (Merah Aksen) -->
-                        <a href="https://saweria.co/artabilitas" target="_blank" class="w-full flex justify-between items-center px-6 py-3 bg-accentA text-white font-bold text-lg rounded-full hover:bg-red-600 transition duration-300 shadow-xl transform hover:scale-[1.02]">
-                            <span>Tier A: Rp 1.500.000 (Direkomendasikan)</span>
-                            <span>Dukung &rarr;</span>
-                        </a>
-                        <!-- Tier B: Sekunder (Indigo Aksen) -->
-                        <a href="https://saweria.co/artabilitas" target="_blank" class="w-full flex justify-between items-center px-6 py-3 bg-accentB text-white font-bold text-lg rounded-full hover:bg-indigo-700 transition duration-300 shadow-lg">
-                            <span>Tier B: Rp 500.000</span>
-                            <span>Dukung &rarr;</span>
-                        </a>
-                    </div>
+                    <!-- SATU TOMBOL DONASI UTAMA -->
+                    <a href="https://saweria.co/artabilitas" target="_blank" class="w-full block text-center px-6 py-4 bg-accentA text-white font-bold text-xl rounded-full hover:bg-red-600 transition duration-300 shadow-xl transform hover:scale-[1.02]">
+                        Dukung via Saweria (Mulai dari Rp 10.000) &rarr;
+                    </a>
+                     <p class="text-xs text-gray-500 mt-4 text-center">
+                        Kontribusi signifikan (misal: Rp 500.000 atau Rp 1.500.000) akan sangat membantu mempercepat pencapaian target kualitas instalasi & arsip.
+                    </p>
                 </div>
             </div>
             <!-- AKHIR DARI KARTU DUKUNGAN TUNGGAL -->
@@ -366,21 +348,30 @@
     <script>
         // Script sederhana untuk mensimulasikan Progress Bar (untuk update manual)
         // Anda hanya perlu mengubah nilai di bawah ini saat mengupdate microsite
-        const targetFund = 30000000; // Target Rp 30 Juta (Ganti sesuai perhitungan kritis)
-        const currentFund = 12000000; // Dana terkumpul saat ini (Ganti saat ada donasi)
+        
+        // ** PANDUAN EDIT: UBAH DUA ANGKA DI BAWAH INI **
+        const targetFund = 35000000; // TOTAL TARGET DANA (Rp 35 Juta)
+        const currentFund = 12000000; // DANA TERKUMPUL SAAT INI (Update angka ini jika ada donasi baru)
 
+        // ** JANGAN UBAH KODE DI BAWAH INI **
+        // Hitung persentase, dibatasi maksimal 100%
         const progressPercent = Math.min((currentFund / targetFund) * 100, 100);
 
-        document.getElementById('progress-bar').style.width = progressPercent + '%';
+        // Update lebar bar progress
+        document.getElementById('progress-bar').style.width = progressPercent.toFixed(2) + '%';
+        
+        // Update teks nominal
+        const formattedCurrent = currentFund.toLocaleString('id-ID');
+        const formattedTarget = targetFund.toLocaleString('id-ID');
+        // Kalimat baru: Rp 12.000.000 dari Target Rp 35.000.000
         document.getElementById('current-fund').textContent = 
-            `Rp ${currentFund.toLocaleString('id-ID')} / Rp ${targetFund.toLocaleString('id-ID')}`;
-        document.querySelector('.text-xs.text-gray-500.mt-2.text-right').textContent = 
-            `Semua tautan donasi mengarah ke Saweria Artabilitas.`;
+            `Rp ${formattedCurrent} dari Target Rp ${formattedTarget}`;
+        
+        // Update keterangan (termasuk persentase)
+        document.querySelector('.text-xs.text-gray-500.mt-2.text-right').innerHTML = 
+            `**Status Update:** Untuk memperbarui angka, edit <code>targetFund</code> dan <code>currentFund</code> di script HTML ini. Persentase saat ini: <strong>${progressPercent.toFixed(2)}%</strong>. Semua tautan donasi mengarah ke Saweria Artabilitas.`;
         
     </script>
 </body>
 </html>
-
-
-
 
